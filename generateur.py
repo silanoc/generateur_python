@@ -1,6 +1,13 @@
 #! /usr/bin/env python3
 # coding: utf-8
 
+"""
+autair : Silanoc
+date création : 27 juillet 2022
+date mise à jour : 27 juillet 2022
+version : 0.1.0
+"""
+
 import os
 
 class Mon_generateur():
@@ -11,11 +18,12 @@ class Mon_generateur():
         self.entete = '''#! /usr/bin/env python3
 # coding: utf-8
 
-# autair : Silanoc
-# date : 
-
-    """_summary_
-    """'''
+"""
+autair : Silanoc
+date création : 
+date mise à jour : 
+version : 0.0.1
+"""'''
         
     def creerdossier(self, nom, chemin = '/home/gabriel-le/Dropbox/mes_depots_git'):
         try:

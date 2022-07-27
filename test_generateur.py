@@ -1,6 +1,13 @@
 #! /usr/bin/env python3
 # coding: utf-8
 
+"""
+autair : Silanoc
+date création : 27 juillet 2022
+date mise à jour : 27 juillet 2022
+version : 0.1.0
+"""
+
 import generateur
 import os
 import sys
@@ -28,11 +35,12 @@ def test_creation_fichier_code():
     message = f'''#! /usr/bin/env python3
 # coding: utf-8
 
-# autair : Silanoc
-# date : 
-
-    """_summary_
-    """
+"""
+autair : Silanoc
+date création : 
+date mise à jour : 
+version : 0.0.1
+"""
 
 if __name__ == '__main__':
     pass
@@ -47,11 +55,12 @@ def test_creation_fichier_test():
     message = '''#! /usr/bin/env python3
 # coding: utf-8
 
-# autair : Silanoc
-# date : 
-
-    """_summary_
-    """
+"""
+autair : Silanoc
+date création : 
+date mise à jour : 
+version : 0.0.1
+"""
 
 import pytest
 import nom_A
