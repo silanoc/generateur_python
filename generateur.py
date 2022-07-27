@@ -13,4 +13,7 @@ class Mon_generateur():
             os.makedirs(f'{chemin}/{nom}')
         except FileExistsError:
             pass
+        
+    def creation_fichier_code(self, nom, chemin = '/home/gabriel-le/Dropbox/mes_depots_git'):
+        fichier = open(f'{chemin}/{nom}/{nom}.py', 'w')
  
