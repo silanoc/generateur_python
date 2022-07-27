@@ -25,6 +25,16 @@ def test_creation_fichier_code():
     mon_generateur.creation_fichier_code('nom_A')
     assert os.path.exists('/home/gabriel-le/Dropbox/mes_depots_git/nom_A/nom_A.py') == True 
     fichier = open('/home/gabriel-le/Dropbox/mes_depots_git/nom_A/nom_A.py', 'r', encoding="utf8")
-    message = """#! /usr/bin/env python3
-# coding: utf-8"""
+    message = '''#! /usr/bin/env python3
+# coding: utf-8
+# 
+# autair : Silanoc
+# date : 
+
+    """_summary_
+    """
+
+if __name__ == __main__:
+    pass
+'''
     assert fichier.read() == message
