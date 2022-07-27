@@ -13,3 +13,9 @@ def test_creation_dossier():
     #nom = f'{sys.path[0]}/nom_A'
     mon_generateur.creerdossier('nom_A', sys.path[0])
     assert os.path.exists(f'{sys.path[0]}/nom_A') == True
+    
+def test_creation_dossier_par_defaut():
+    mon_generateur = generateur.Mon_generateur('nom_A')
+    #nom = f'{sys.path[0]}/nom_A'
+    mon_generateur.creerdossier('nom_A')
+    assert os.path.exists('/home/gabriel-le/Dropbox/mes_depots_git/nom_A') == True
