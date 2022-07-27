@@ -25,9 +25,9 @@ def test_creation_fichier_code():
     mon_generateur.creation_fichier_code('nom_A')
     assert os.path.exists('/home/gabriel-le/Dropbox/mes_depots_git/nom_A/nom_A.py') == True 
     fichier = open('/home/gabriel-le/Dropbox/mes_depots_git/nom_A/nom_A.py', 'r', encoding="utf8")
-    message = '''#! /usr/bin/env python3
+    message = f'''#! /usr/bin/env python3
 # coding: utf-8
-# 
+
 # autair : Silanoc
 # date : 
 
@@ -36,5 +36,23 @@ def test_creation_fichier_code():
 
 if __name__ == __main__:
     pass
+'''
+    assert fichier.read() == message
+    
+def test_creation_fichier_test():
+    mon_generateur = generateur.Mon_generateur('nom_A')
+    mon_generateur.creation_fichier_test('nom_A')
+    assert os.path.exists('/home/gabriel-le/Dropbox/mes_depots_git/nom_A/test_nom_A.py') == True 
+    fichier = open('/home/gabriel-le/Dropbox/mes_depots_git/nom_A/test_nom_A.py', 'r', encoding="utf8")
+    message = '''#! /usr/bin/env python3
+# coding: utf-8
+# autair : Silanoc
+# date : 
+
+    """_summary_
+    """
+
+import pytest
+import nom_A
 '''
     assert fichier.read() == message
