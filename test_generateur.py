@@ -46,6 +46,7 @@ def test_creation_fichier_test():
     fichier = open('/home/gabriel-le/Dropbox/mes_depots_git/nom_A/test_nom_A.py', 'r', encoding="utf8")
     message = '''#! /usr/bin/env python3
 # coding: utf-8
+
 # autair : Silanoc
 # date : 
 
