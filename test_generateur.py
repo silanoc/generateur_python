@@ -34,7 +34,7 @@ def test_creation_fichier_code():
     """_summary_
     """
 
-if __name__ == __main__:
+if __name__ == '__main__':
     pass
 '''
     assert fichier.read() == message
@@ -57,3 +57,12 @@ import pytest
 import nom_A
 '''
     assert fichier.read() == message
+    
+def test_integration_1_dossier_2_fichiers():
+    mon_generateur = generateur.Mon_generateur('nom_A')
+    mon_generateur.enchaine_dossier_code_test()
+    
+def test_demande_valeurs_depart():
+    nom, chemin = generateur.demande_valeurs_depart()
+    assert 'nom' != ""
+    assert 'chemin' != ""

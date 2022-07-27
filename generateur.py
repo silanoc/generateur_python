@@ -27,7 +27,7 @@ class Mon_generateur():
         fichier = open(f'{chemin}/{nom}/{nom}.py', 'w', encoding="utf8")
         message = f'''{self.entete}
 
-if __name__ == __main__:
+if __name__ == '__main__':
     pass
 '''
         fichier.write(message)
@@ -40,7 +40,20 @@ import pytest
 import {nom}
 '''
         fichier.write(message)
-        
     
+    def enchaine_dossier_code_test(self):
+        self.creerdossier(self.nom, self.chemin)
+        self.creation_fichier_code(self.nom, self.chemin)
+        self.creation_fichier_test(self.nom, self.chemin)
         
+def demande_valeurs_depart():
+    nom = input('nom dossier')
+    chemin = input('chemin du dossier')
+    return nom, chemin
+
+if __name__ == '__main__':
+        
+    nom, chemin = demande_valeurs_depart()
+    projet = Mon_generateur(nom, chemin)
+    projet.enchaine_dossier_code_test()        
  
