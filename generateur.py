@@ -15,5 +15,9 @@ class Mon_generateur():
             pass
         
     def creation_fichier_code(self, nom, chemin = '/home/gabriel-le/Dropbox/mes_depots_git'):
-        fichier = open(f'{chemin}/{nom}/{nom}.py', 'w')
+        fichier = open(f'{chemin}/{nom}/{nom}.py', 'w', encoding="utf8")
+        message = """#! /usr/bin/env python3
+# coding: utf-8"""
+        fichier.write(message)
+        
  
